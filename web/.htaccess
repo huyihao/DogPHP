@@ -1,0 +1,7 @@
+# 分布式配置文件，对url进行重写，隐藏index.php
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FIELNAME} !-d
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
